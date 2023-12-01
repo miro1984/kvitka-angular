@@ -1,0 +1,36 @@
+.language {
+
+  &-item {
+    &:last-child {
+      padding-left: 4px;
+
+      &:before {
+        content: "/";
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 18px;
+        color: var(--white-color);
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &-button {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    transition: all .3s;
+
+    &.active {
+      font-weight: 600;
+    }
+
+    @media  (min-width: 992px) {
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+}

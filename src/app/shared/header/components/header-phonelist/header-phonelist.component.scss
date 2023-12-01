@@ -1,0 +1,103 @@
+.header {
+
+  &-phone {
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 8px;
+
+    &-list {
+      position: absolute;
+      padding: 8px 16px;
+      width: 268px;
+      top: 100%;
+      right: 0;
+      background-color: var(--white-color);
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      transition: .4s ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+
+      @media (max-width: 991px) {
+        opacity: 1;
+        visibility: visible;
+      }
+
+
+      &-item {
+        padding: 4px 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        &-icon {
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          fill: #C8C8C8;
+        }
+
+        &-link {
+          font-family: sans-serif;
+          padding-left: 16px;
+          font-weight: 400;
+          font-size: 21px;
+          transition: all .4s;
+        }
+
+        &:hover &-link {
+          font-weight: 700;
+        }
+      }
+    }
+
+    &-title {
+
+      &-wrapper {
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+
+        @media (max-width: 991px) {
+          display: none;
+        }
+      }
+
+      &-icon {
+        width: 24px;
+        height: 24px;
+        fill: var(--white-color);
+        transition: all .4s ease;
+      }
+
+      &-number {
+        font-size: 30px;
+        color: var(--white-color);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        transition: color .4s ease;
+      }
+
+      &:hover &-number {
+        color: var(--accent-color);
+      }
+
+      &:hover &-icon {
+        transform: rotate(90deg);
+        fill: var(--accent-color);
+      }
+
+      &:hover .header-phone-list {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &:hover .header-phone-list {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

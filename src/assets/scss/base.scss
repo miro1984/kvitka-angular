@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.hover {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s;
+  z-index: 19;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+/* Display */
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.none {
+  display: none;
+}
+
+/* Font Weight */
+.fw-light {
+  font-weight: 300;
+}
+.fw-regular {
+  font-weight: 400;
+}
+.fw-medium {
+  font-weight: 500;
+}
+.fw-semibold {
+  font-weight: 600;
+}
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+/* Font Size */
+.fs-8 {
+  font-size: var(--index-size);
+}
+.fs-16 {
+  font-size:  calc(2 * var(--index-size));
+}
+.fs-32 {
+  font-size:  calc(3 * var(--index-size));
+}
+.fs-48 {
+  font-size:  calc(4 * var(--index-size));
+}
+
+
+/* Letter Spacing */
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
+
+/* Backgrounds Color */
+.bc-grey {
+  background-color: var(--grey-color);
+}
+.bc-white {
+  background-color: var(--white-color);
+}
+
+/* Header Action Icon Font*/
+.font-icon {
+  font-family: "headeraction";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Buttons*/
+
+.profile-button {
+  width: 250px;
+  padding: 16px 32px;
+  background-color: var(--white-color);
+  border: 1px solid var(--black-color);
+  border-radius: 8px;
+  color: var(--black-color);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .5s;
+
+
+  &:hover {
+    color: var(--white-color);
+    background-color: var(--black-color);
+  }
+}

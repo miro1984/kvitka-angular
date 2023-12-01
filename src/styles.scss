@@ -1,0 +1,50 @@
+@import url('assets/scss/main.scss');
+
+
+
+body {
+  font-family: "Montserrat";
+}
+
+.page {
+  //overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  &-container {
+    color: blue;
+  }
+
+  &-title {
+    position: relative;
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 48px;
+    color: var(--black-color);
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 400px;
+      height: 2px;
+      left: 0;
+      bottom: -12px;
+      background-color: var(--accent-color);
+    }
+
+    &-text {
+      max-width: 800px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

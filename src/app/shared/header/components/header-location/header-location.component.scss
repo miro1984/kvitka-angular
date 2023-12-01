@@ -1,0 +1,30 @@
+.location {
+
+  &-link {
+    display: inline-flex;
+    align-items: center;
+
+    &-icon {
+      width: 13px;
+      height: 13px;
+      fill: var(--white-color);
+      transition: fill .4s ease;
+    }
+
+    &-text {
+      padding-left: calc((var(--index)) / 2);
+      color: var(--white-color);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      transition: color .4s ease;
+    }
+
+    &:hover &-text {
+      color: var(--accent-color);
+    }
+
+    &:hover &-icon {
+      fill: var(--accent-color);
+    }
+  }
+}
+

@@ -1,0 +1,34 @@
+<header class="header">
+    <div class="container">
+        <div class="header-content flex">
+            <div class="header-content-left">
+                <div *ngIf='widthDisplay > 992' class="header-title-wrapper">
+                    <a href="#" class="header-title fw-black">
+                        <p><span>Печать</span> цифровая <span>и</span></p>
+                        <p class="letter-spacing-1">широкоформатная</p>
+                    </a>
+                </div>
+                <app-header-action *ngIf="widthDisplay >= 992"></app-header-action>
+                <app-header-burger class="header-button"
+                                   (click)="onButtonClickMenu(toggleMenu)"
+                                   [toggleMenuOn]="toggleMenuOn"
+                                   *ngIf="widthDisplay < 992">
+                </app-header-burger>
+            </div>
+
+            <div class="header-content-right flex">
+                <app-header-logo class="header-logo"></app-header-logo>
+                <app-header-language class="header-language" *ngIf="widthDisplay >= 992"></app-header-language>
+                <app-header-phonelist  class="phonelist" [ngClass]="{ '' : !togglePhone, 'open' : togglePhone }"></app-header-phonelist>
+                <app-header-location *ngIf="widthDisplay >= 992"></app-header-location>
+            </div>
+            <app-header-phone class="header-button"
+                              (click)="onButtonClickPhone(togglePhone)"
+                              [togglePhoneListOn]="togglePhoneListOn"
+                              *ngIf="widthDisplay < 992"></app-header-phone>
+        </div>
+        <app-menu *ngIf="widthDisplay >= 992" ></app-menu>
+    </div>
+
+    <app-menu-mobile *ngIf="widthDisplay < 992"  class="menu" [ngClass]="{ '' : !toggleMenu, 'open' : toggleMenu}"></app-menu-mobile>
+</header>

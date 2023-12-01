@@ -1,0 +1,57 @@
+<div class="profile-content">
+    <ul class="list-reset profile-tabs-list">
+        <li class="profile-tabs-item" *ngFor="let company of companiesArray; let item=index">
+            <a class="profile-tabs-link"
+               (click)="setTab(item)"
+               [ngClass]="{'active' : activatedTab == item, '' : activatedTab !== item }"
+            >{{ company.name }}</a>
+        </li>
+    </ul>
+    <div class="profile-tabs-content">
+        <ul class="list-reset user-tabs-list">
+            <li class="user-tabs-item">
+                <div class="user-tabs-input">
+                    <p class="user-tabs-label">Название компании:</p>
+                    <input class="user-tabs-value" type="text" placeholder="{{ companiesArray[activatedTab].name }}">
+                </div>
+            </li>
+            <li class="user-tabs-item">
+                <div class="user-tabs-input">
+                    <p class="user-tabs-label">Код ЄДРПОУ / ІПН</p>
+                    <input class="user-tabs-value" type="text" placeholder="{{ companiesArray[activatedTab].ipn }}">
+                </div>
+            </li>
+            <li class="user-tabs-item">
+                <div class="user-tabs-input">
+                    <p class="user-tabs-label">Номер плательщика НДС:</p>
+                    <input class="user-tabs-value" type="text" placeholder="{{ companiesArray[activatedTab].pdv }}">
+                    <p class="user-tabs-description">Если Ваша компания не является плательщиком НДС, оставьте пустым.</p>
+                </div>
+            </li>
+            <li class="user-tabs-item">
+                <div class="user-tabs-input">
+                    <p class="user-tabs-label">Адрес:</p>
+                    <input class="user-tabs-value" type="text" placeholder="{{ companiesArray[activatedTab].location }}">
+                </div>
+            </li>
+            <li class="user-tabs-item">
+                <div class="user-tabs-input">
+                    <p class="user-tabs-label">Название банка:</p>
+                    <input class="user-tabs-value" type="text" placeholder="{{ companiesArray[activatedTab].bankname }}">
+                </div>
+            </li>
+            <li class="user-tabs-item">
+                <div class="user-tabs-input">
+                    <p class="user-tabs-label">МФО банка:</p>
+                    <input class="user-tabs-value" type="text" placeholder="{{ companiesArray[activatedTab].bankmfo }}">
+                </div>
+            </li>
+        </ul>
+
+        <div class="user-tabs-buttons">
+            <button class="btn-reset profile-button user-tabs-button">Сохранить</button>
+            <button class="btn-reset profile-button user-tabs-button">Удалить</button>
+        </div>
+    </div>
+</div>
+

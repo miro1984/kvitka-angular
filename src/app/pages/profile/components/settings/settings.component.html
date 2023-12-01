@@ -1,0 +1,12 @@
+<div class="profile-content-header">
+    <app-profile-title [title]="title"></app-profile-title>
+</div>
+
+<ul class="list-reset profile-settings-list">
+    <li class="profile-settings-item" *ngFor="let item of settingsArray">
+        <a routerLink="{{ item.routerlink }}" class="profile-settings-link" routerLinkActive="active">{{ item.label }}</a>
+    </li>
+</ul>
+<div class="profile-content-container">
+        <router-outlet></router-outlet>
+</div>

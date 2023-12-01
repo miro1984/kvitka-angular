@@ -1,0 +1,21 @@
+/* Reset Base Styles */
+@import url('normalize.scss');
+@import url('resets.scss');
+
+/* Fonts*/
+@import url('fonts.scss');
+
+/* Variables */
+@import url('variables.scss');
+
+/* Base Styles */
+@import url('base.scss');
+
+/* Components*/
+
+/* Pages */
+@import url('profile.scss');
+
+
+
+@import '~@angular/cdk/overlay-prebuilt.css';

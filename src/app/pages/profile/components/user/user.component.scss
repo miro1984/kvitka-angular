@@ -1,0 +1,111 @@
+.user {
+  &-wrapper {
+    //height: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    //display: flex;
+    //
+    //justify-content: space-between;
+    //border: 1px solid var(--grey-color);
+    background-color: var(--white-color);
+    margin-bottom: 32px;
+  }
+
+  &-content {
+
+  }
+
+  &-header {
+    text-align: center;
+    //padding: 16px;
+    //display: flex;
+    //align-items: center;
+    //justify-content: space-between;
+    //background-color: var(--white-color);
+    //box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.04), 0px 2px 6px 0px rgba(0, 0, 0, 0.04), 0px 16px 24px 0px rgba(0, 0, 0, 0.06);
+    margin-bottom: 16px;
+    //border: 1px solid var(--grey-color);
+    //border-radius: 8px;
+    border-bottom: 2px solid var(--accent-color);
+  }
+
+
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      //padding: 16px;
+      background-color: var(--white-color);
+      border-radius: 8px;
+      //box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.04), 0px 2px 6px 0px rgba(0, 0, 0, 0.04), 0px 8px 12px 0px rgba(0, 0, 0, 0.06);
+      //margin-bottom: 8px;
+      //border-bottom: 1px solid var(--accent-color);
+
+
+      &-manager {
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+
+    }
+
+
+  &-image {
+    width: 64px;
+    height: 64px;
+    //border-radius: 50%;
+    //margin-left: 16px;
+  }
+
+  &-name {
+    font-size: 20px;
+    line-height: 2.2;
+    font-weight: 600;
+
+    color: var(--dark-grey-color);
+
+  }
+
+  &-id {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--dark-grey-color);
+  }
+
+  &-description {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--dark-grey-color);
+
+      &-manager {
+        margin-bottom: 4px;
+      }
+  }
+
+  &-value {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  &-manager {
+
+    &-item {
+      //margin-bottom: 16px;
+    }
+  }
+
+  &-button {
+    padding: 8px;
+    width: 100%;
+    background-color: var(--accent-color);
+    border: none;
+
+    &:hover {
+      background-color: var(--black-color);
+    }
+  }
+}
+
+

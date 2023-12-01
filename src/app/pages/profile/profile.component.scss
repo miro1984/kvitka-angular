@@ -1,0 +1,32 @@
+.profile {
+
+  &-section {
+    background-color: var(--grey-color);
+  }
+
+  &-container {
+    display: flex;
+    gap: 16px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &-sidenav {
+    width: 290px;
+    border-radius: 16px;
+
+    &-item {
+      position: sticky;
+      top: 16px;
+      z-index: 2;
+    }
+  }
+
+  &-content {
+    &-wrapper {
+      width: 100%;
+
+
+    }
+  }
+}

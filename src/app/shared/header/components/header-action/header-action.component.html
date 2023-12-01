@@ -1,0 +1,8 @@
+<ul class="list-reset header-action-list flex">
+    <li class="header-action-item" *ngFor="let item of iconsheaderaction">
+        <button class="btn-reset header-action-button flex">
+            <i class="font-icon header-action-button-icon" [innerHTML]="item.code"></i>
+            <p class="header-action-button-text">{{item.name}}</p>
+        </button>
+    </li>
+</ul>

@@ -1,0 +1,14 @@
+<ul class="language-list list-reset flex">
+    <li class="language-item">
+        <button class="language-button btn-reset"
+                (click)="changeLanguage()"
+                [ngClass]=" { 'active': toggleLanguage, '': !toggleLanguage}"
+        >ru</button>
+    </li>
+    <li class="language-item">
+        <button class="language-button btn-reset"
+                (click)="changeLanguage()"
+                [ngClass]=" { 'active': !toggleLanguage, '': toggleLanguage}"
+        >ua</button>
+    </li>
+</ul>

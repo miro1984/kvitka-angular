@@ -1,0 +1,40 @@
+        <div class="profile-content">
+            <ul class="list-reset profile-tabs-list">
+                <li class="profile-tabs-item" *ngFor="let manager of managersArray; let item=index">
+                    <a class="profile-tabs-link"
+                       (click)="setTab(item)"
+                       [ngClass]="{'active' : activatedTab == item, '' : activatedTab !== item }"
+                    >{{ manager.name }}</a>
+                </li>
+            </ul>
+            <div class="profile-content">
+                <div class="profile-tabs-content">
+                    <ul class="list-reset user-tabs-list">
+                        <li class="user-tabs-item">
+                            <div class="user-tabs-input">
+                                <p class="user-tabs-label">Имя:</p>
+                                <input class="user-tabs-value" type="text" placeholder="{{ managersArray[activatedTab].name }}">
+                            </div>
+                        </li>
+                        <li class="user-tabs-item">
+                            <div class="user-tabs-input">
+                                <p class="user-tabs-label">Email::</p>
+                                <input class="user-tabs-value" type="text" placeholder="{{ managersArray[activatedTab].email }}">
+                            </div>
+                        </li>
+                        <li class="user-tabs-item">
+                            <div class="user-tabs-input">
+                                <p class="user-tabs-label">Телефон::</p>
+                                <input class="user-tabs-value" type="text" placeholder="{{ managersArray[activatedTab].phone }}">
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="user-tabs-buttons">
+                        <button class="btn-reset profile-button user-tabs-button">Сохранить</button>
+                        <button class="btn-reset profile-button user-tabs-button">Удалить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+

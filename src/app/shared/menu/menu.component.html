@@ -1,0 +1,8 @@
+
+<nav class="main-nav nav">
+    <ul class="list-reset nav-list grid">
+        <li class="nav-item" *ngFor="let item of menudata">
+            <app-menu-item [menuitem]="item"></app-menu-item>
+        </li>
+    </ul>
+</nav>
